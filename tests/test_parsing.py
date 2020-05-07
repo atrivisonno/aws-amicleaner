@@ -2,8 +2,8 @@
 
 import json
 
-from amicleaner.resources.models import AMI, AWSBlockDevice, AWSEC2Instance
-from amicleaner.resources.models import AWSTag
+from main.amicleaner.resources import AMI, AWSBlockDevice, AWSEC2Instance
+from main.amicleaner.resources import AWSTag
 
 
 def test_get_awstag_from_none():

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 from setuptools import setup, find_packages
-from amicleaner import __author__, __author_email__
-from amicleaner import __license__, __version__
+from main.amicleaner import __author__, __author_email__
+from main.amicleaner import __license__, __version__
 
 
 with open('README.rst') as readme_file:

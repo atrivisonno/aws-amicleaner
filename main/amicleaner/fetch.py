@@ -50,6 +50,8 @@ class Fetcher(object):
 
         unused_lcs = list(set(all_lcs) - set(used_lc))
 
+        if unused_lcs == ['']:
+            return []
         resp = self.asg.describe_launch_configurations(
             LaunchConfigurationNames=unused_lcs
         )
@@ -69,6 +71,8 @@ class Fetcher(object):
                       for asg in resp.get("AutoScalingGroups", [])
                       if asg.get("DesiredCapacity", 0) == 0]
 
+        if zeroed_lcs == ['']:
+            return []
         resp = self.asg.describe_launch_configurations(
             LaunchConfigurationNames=zeroed_lcs
         )

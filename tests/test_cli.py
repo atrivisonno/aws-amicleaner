@@ -6,10 +6,10 @@ import boto3
 from moto import mock_ec2, mock_autoscaling
 from datetime import datetime
 
-from amicleaner.cli import App
-from amicleaner.fetch import Fetcher
-from amicleaner.utils import parse_args, Printer
-from amicleaner.resources.models import AMI, AWSEC2Instance
+from main.amicleaner.cli import App
+from main.amicleaner.fetch import Fetcher
+from main.amicleaner.utils import parse_args, Printer
+from main.amicleaner.resources import AMI, AWSEC2Instance
 
 
 @mock_ec2
